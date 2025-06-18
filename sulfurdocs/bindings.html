@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <title>Sulfur Modding Docs</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <h1>Lua bindings</h1>
+    <a href="index.html">Main page</a>
+    <h2>Variables</h2>
+    <table>
+        <tr>
+          <th>Variable</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+            <td>Debris</td>
+            <td>Service</td>
+            <td>Equivalent to game:GetService("Debris"), because the game variable is not available</td>
+        </tr>
+        <tr>
+          <td>input</td>
+          <td>table</td>
+          <td>Contains the currently held inputs. up/down/left/right are bools <br> action1 and action2 are numbers (0 = not held, = 1 is pressed, >/>= 1 is held)</td>
+        </tr>
+        <tr>
+            <td>plr</td>
+            <td>table</td>
+            <td>Contains all player values.</td>
+        </tr>
+      </table> 
+    <h2>Enum</h2>
+    Sulfur has it's own Enum table instead of Roblox's, containing
+    properties for various things. It is <b>read only</b>, and accessed
+    like Enum.Property.SubProperty
+    <table>
+        <tr>
+          <th>Enum</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>DefaultPhysics</td>
+          <td>Default player physics. Can be set to plr.curPhysics</td>
+        </tr>
+        <tr>
+          <td>PartScale</td>
+          <td>It's 0.125, or 1/8 of a stud, applied typically to object velocities</td>
+        </tr>
+        <tr>
+            <td>MonitorType</td>
+            <td>Used when spawning a Monitor. Subproperties: Rings, Invincibility, Shoes, Life</td>
+        </tr>
+        <tr>
+            <td>BalloonType</td>
+            <td>Used when spawning a Balloon. Subproperties: Blue, Yellow, Red</td>
+        </tr>
+    </table> 
+    <h2>Functions</h2>
+    <table>
+        <tr>
+          <th>Function</th>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+            <td>spawnPart</td>
+            <td></td>
+            <td>Spawns a part (because Instance.new is not available)</td>
+        </tr>
+        <tr>
+            <td>spawnObject</td>
+            <td>objname:string, pos:Vector3, args:table</td>
+            <td>Spawns an object. Not all default Sulfur objects are available, but it can spawn any custom object.<br>args is a list of settings that get applied to the object, such as Type for Monitors and Balloons. (See Enum)</td>
+        </tr>
+        <tr>
+          <td>addObject</td>
+          <td>objname:string, args:table</td>
+          <td>Adds an object to the Engine that can then be spawned via spawnObject, or placed inside of a level if it's in EditorDefinitions</td>
+      </tr>
+        <tr>
+            <td>playSound</td>
+            <td>soundname:string, volume:number</td>
+            <td>Plays a sound</td>
+        </tr>
+        <tr>
+            <td>setMusic</td>
+            <td>musicname:string</td>
+            <td>Changes the current music. (NOTE: This overrides the loaded level's Music setting)</td>
+        </tr>
+    </table> 
+</body>

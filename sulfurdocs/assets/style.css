@@ -1,0 +1,29 @@
+body {
+    width: 640px;
+    margin:auto;
+
+    color: white;
+    background-image: url(bg.png);
+    background-repeat: repeat;
+
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    color: rgb(188, 188, 255);
+}
+
+table, th, td {
+    border: 1px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    padding: 4px;
+    background-color: black;
+}
