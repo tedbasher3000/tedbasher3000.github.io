@@ -21,7 +21,12 @@
         Once you highlight an object, you can view it's properties in the same "Mercury - Objects" window (Click on "Selected Object Properties" if they don't appear.) <br> <br>
 
         Once you're done, drag the level back to "game.ReplicatedStorage.Mod.Maps", and click "Export Mod" in "Mercury - Main".
-        You can then load this mod via the "MODS" tab in-game.
+        You can then load this mod via the "MODS" tab in-game. <br> <br>
+
+        Note: Exporting does not result in a 1:1 version of your level. Currently it only saves parts on the root of Collision, Layer0 and Layer1. <br>
+        Anything else, including parts inside of parts, does not get exported. Additionally only Position, Size, Orientation, Shape, Color, Transparency and CanCollide get saved. <br>
+        No decals, textures, or PointLights are supported at this time. Unions are also, and most likely never will be supported. No MeshParts either right now.
+
         </p>
         <h2>Extra</h2>
         <p>
