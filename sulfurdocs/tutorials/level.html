@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>Sulfur Modding Docs</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <h1>Sulfur/Mercury v0.1a Level tutorial</h1>
+    Make sure you have Mercury installed from whatever source. (If rbxmx, go to PLUGINS tab, Open Plugins Folder, and place it there)
+    <br>
+    <p>
+        First, open a new place file, and empty the Workspace. <br> <br>
+        <img src="images/empty_workspace.png"> <br> <br>
+        Then, go to your PLUGINS tab and click on Toggle Mercury GUI.
+        Unlike CSEdit, Mercury uses a bunch of windows for everything, so make sure you have them enabled. <br> <br> 
+
+        On "Mercury - Main", click "Load Template". This will place the correct mod structure inside of game.ReplicatedStorage. <br> 
+        This template contains a level template as well. You can delete it if you want your mod to only use scripts, but for this tutorial, we need it. <br> <br>
+
+        Take the template out to Workspace to edit it. Make sure NO OTHER Folders exist in Workspace, as it will confuse Mercury. <br>
+        From there on, you can change level settings in Level.Configuration (TODO:: create music list), and place Objects using "Mercury - Objects". <br>
+        Once you highlight an object, you can view it's properties in the same "Mercury - Objects" window (Click on "Selected Object Properties" if they don't appear.) <br> <br>
+
+        Once you're done, drag the level back to "game.ReplicatedStorage.Mod.Maps", and click "Export Mod" in "Mercury - Main".
+        You can then load this mod via the "MODS" tab in-game.
+        </p>
+        <h2>Extra</h2>
+        <p>
+            To define custom objects, go to "Mod.EditorDefinitions", and copy the existing Red Star Ring code, <b>MAKING SURE TO KEEP THE ; AFTER THE }</b> <br> <br>
+            <img src="images/editordef.png"> <br> <br>
+            After this, you'll need to load the object via the addObject() function, as well as define any custom behaviour.
+            You can use the "RedStarRing" script in "Mod.Scripts" for reference. <br>
+        </p> 
+    </p>
+</body>
